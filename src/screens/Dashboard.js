@@ -16,12 +16,14 @@ export default function Dashboard({ navigation }) {
       </Paragraph>
       <Button
         mode="outlined"
-        onPress={() =>
+        onPress={() => {
+          localStorage.setItem("token", "");
           navigation.reset({
             index: 0,
             routes: [{ name: 'StartScreen' }],
           })
-        }
+          
+        }}
       >
         Logout
       </Button>

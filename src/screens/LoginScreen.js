@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { TouchableOpacity, StyleSheet, View } from 'react-native'
+import { TouchableOpacity, StyleSheet, View, Alert, AsyncStorage } from 'react-native'
 import { Text } from 'react-native-paper'
 import Background from '../components/Background'
 import Logo from '../components/Logo'
@@ -10,12 +10,17 @@ import BackButton from '../components/BackButton'
 import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
+import axios from 'axios'
+import { BASE_URL } from '../Constant/Constant'
+import Toast from 'react-native-toast-message'
+import 'localstorage-polyfill'
+
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
 
-  const onLoginPressed = () => {
+  const onLoginPressed = async () => {
     const emailError = emailValidator(email.value)
     const passwordError = passwordValidator(password.value)
     if (emailError || passwordError) {
@@ -23,10 +28,45 @@ export default function LoginScreen({ navigation }) {
       setPassword({ ...password, error: passwordError })
       return
     }
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'Dashboard' }],
+
+    fetch(`${BASE_URL}/generate-token`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: email.value,
+        password: password.value,
+      }),
     })
+      .then((response) => response.json())
+      .then((responseJson) => {
+        if(responseJson.token != undefined && responseJson.token != null && responseJson.token != ""){
+          localStorage.setItem("token" , responseJson.token);
+          Toast.show({
+            type: 'success',
+            text1: 'Login status',
+            text2: 'Success 👋'
+          });
+          navigation.reset({
+            index: 0,
+            routes: [{ name: 'Dashboard' }],
+          })
+          
+        } else {
+          Toast.show({
+            type: 'error',
+            text1: 'Login status',
+            text2: 'Vui lòng kiểm tra lại tài khoản và mật khẩu ❌❌❌'
+          });
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    
   }
 
   return (

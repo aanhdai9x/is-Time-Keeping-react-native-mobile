@@ -5,6 +5,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { theme } from './src/core/theme';
+import Toast from 'react-native-toast-message';
+import 'localstorage-polyfill';
 import {
   StartScreen,
   LoginScreen,
@@ -20,10 +22,11 @@ export default function App() {
     <Provider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="StartScreen"
-          screenOptions={{
-            headerShown: false,
-          }}
+        initialRouteName = {(localStorage.getItem("token") != null && localStorage.getItem("token") != "") ? 
+         "Dashboard": "StartScreen"}
+        screenOptions={{
+          headerShown: false,
+        }}
         >
           <Stack.Screen name="StartScreen" component={StartScreen} />
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
@@ -33,8 +36,10 @@ export default function App() {
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}
           />
+
         </Stack.Navigator>
       </NavigationContainer>
+      <Toast />
     </Provider>
   );
 }

@@ -1,5 +1,7 @@
 export const COLORS = {
     primary_orange: '#ee4d2d', // primary shopee color
+    dark_green: '#00cc00',
+    light_grey: '#748c94',
 }
 
 export const BACKGROUNDS = {

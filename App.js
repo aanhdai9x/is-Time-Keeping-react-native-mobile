@@ -14,6 +14,7 @@ import {
   ResetPasswordScreen,
   Dashboard,
 } from './src/screens';
+import Tabs from './src/navigation/tabs';
 
 const Stack = createStackNavigator();
 
@@ -22,16 +23,17 @@ export default function App() {
     <Provider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
-        initialRouteName = {(localStorage.getItem("token") != null && localStorage.getItem("token") != "") ? 
-         "Dashboard": "StartScreen"}
-        screenOptions={{
-          headerShown: false,
-        }}
+          initialRouteName={(localStorage.getItem("token") != null && localStorage.getItem("token") != "") ?
+            "Dashboard" : "Tabs"}
+          screenOptions={{
+            headerShown: false,
+          }}
         >
           <Stack.Screen name="StartScreen" component={StartScreen} />
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
+          <Stack.Screen name="Tabs" component={Tabs} />
           <Stack.Screen
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}

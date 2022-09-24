@@ -7,6 +7,7 @@ import QRScreen from "../screens/QRScreen";
 import WorkplaceScreen from "../screens/WorkplaceScreen";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { COLORS } from "../Constant/Constant";
+import HomeStacks from "./homeStacks";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,6 +26,7 @@ const CustomTabBarButton = ({children, onPress}) => (
             height: 70,
             borderRadius: 35,
             backgroundColor: COLORS.dark_green,
+            ...style.shadow,
         }}>
             {children}
         </View>
@@ -39,7 +41,7 @@ const Tabs = () => {
                 tabBarShowLabel: false,
                 tabBarStyle: { 
                     position: 'absolute',
-                    bottom: 25,
+                    bottom: 10,
                     left: 20,
                     right: 20,
                     elevation: 0,
@@ -50,7 +52,7 @@ const Tabs = () => {
                 },
             }}
         >
-            <Tab.Screen name="Home" component={HomeScreen} options={{
+            <Tab.Screen name="Home" component={HomeStacks} options={{
                 tabBarIcon: ({focused}) =>(
                     <View style={{alignItems: 'center', justifyContent: 'center'}}>
                         <Image
@@ -91,7 +93,7 @@ const Tabs = () => {
                             style={{
                                 width: 30,
                                 height: 30,
-                                tintColor: '#fff', 
+                                tintColor: '#fff',
                             }}
                         />
                     </View>

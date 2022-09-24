@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Provider } from 'react-native-paper';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { theme } from './src/core/theme';
@@ -15,6 +15,9 @@ import {
   Dashboard,
 } from './src/screens';
 import Tabs from './src/navigation/tabs';
+import EventScreen from './src/screens/homeTab/EventScreen'
+import MeetingScheduleScreen from './src/screens/homeTab/MeetingScheduleScreen'
+import HomeStacks from './src/navigation/homeStacks';
 
 const Stack = createStackNavigator();
 
@@ -24,7 +27,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName={(localStorage.getItem("token") != null && localStorage.getItem("token") != "") ?
-            "Dashboard" : "Tabs"}
+            "Dashboard" : "Tabs"} // Thay Tabs = StartScreen để đăng nhập
           screenOptions={{
             headerShown: false,
           }}
@@ -32,14 +35,18 @@ export default function App() {
           <Stack.Screen name="StartScreen" component={StartScreen} />
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-          <Stack.Screen name="Dashboard" component={Dashboard} />
-          <Stack.Screen name="Tabs" component={Tabs} />
           <Stack.Screen
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}
           />
+          <Stack.Screen name="Dashboard" component={Dashboard} />
+          <Stack.Screen name="Tabs" component={Tabs} />
 
+          {/* Home Stack */}
+          <Stack.Screen name="HomeStacks" component={HomeStacks} />
+          
         </Stack.Navigator>
+
       </NavigationContainer>
       <Toast />
     </Provider>

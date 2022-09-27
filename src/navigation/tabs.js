@@ -8,6 +8,7 @@ import WorkplaceScreen from "../screens/WorkplaceScreen";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { COLORS } from "../Constant/Constant";
 import HomeStacks from "./homeStacks";
+import AddStacks from "./addStacks";
 
 const Tab = createBottomTabNavigator();
 
@@ -118,7 +119,7 @@ const Tabs = () => {
                     </View>
                 ),
             }}/>
-            <Tab.Screen name="Add" component={AddScreen} options={{
+            <Tab.Screen name="Add" component={AddStacks} options={{
                 tabBarIcon: ({focused}) =>(
                     <View>
                         <Image

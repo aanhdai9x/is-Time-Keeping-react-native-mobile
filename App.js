@@ -15,9 +15,8 @@ import {
   Dashboard,
 } from './src/screens';
 import Tabs from './src/navigation/tabs';
-import EventScreen from './src/screens/homeTab/EventScreen'
-import MeetingScheduleScreen from './src/screens/homeTab/MeetingScheduleScreen'
 import HomeStacks from './src/navigation/homeStacks';
+import AddStacks from './src/navigation/addStacks';
 
 const Stack = createStackNavigator();
 
@@ -44,6 +43,8 @@ export default function App() {
 
           {/* Home Stack */}
           <Stack.Screen name="HomeStacks" component={HomeStacks} />
+          {/* Add Stack */}
+          <Stack.Screen name="AddStacks" component={AddStacks} />
           
         </Stack.Navigator>
 

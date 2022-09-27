@@ -1,5 +1,3 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-import { COLORS } from "../Constant/Constant";
 import EventScreen from "../screens/homeTab/EventScreen"
 import MeetingScheduleScreen from "../screens/homeTab/MeetingScheduleScreen"
 import HomeScreen from "../screens/HomeScreen";

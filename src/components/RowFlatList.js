@@ -26,7 +26,7 @@ export default function RowFlatList({ workspace }) {
                 >
                     <Image style={{ width: 30, height: 30, marginBottom: 15 }} source={icon} />
                     <View style={{ flex: 1 }}>
-                        <Text style={{ paddingLeft: 20 }}>{title}</Text>
+                        <Text style={{ fontWeight: 'bold', paddingLeft: 20 }}>{title}</Text>
                         <Text>{description}</Text>
                     </View>
                     <Image style={{ width: 30, height: 30, marginBottom: 15, tintColor: COLORS.light_grey }} source={require('../assets/next.png')} />

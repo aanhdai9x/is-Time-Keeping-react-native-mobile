@@ -17,6 +17,7 @@ import {
 import Tabs from './src/navigation/tabs';
 import HomeStacks from './src/navigation/homeStacks';
 import AddStacks from './src/navigation/addStacks';
+import WorkplaceStacks from './src/navigation/workplaceStacks';
 
 const Stack = createStackNavigator();
 
@@ -45,6 +46,8 @@ export default function App() {
           <Stack.Screen name="HomeStacks" component={HomeStacks} />
           {/* Add Stack */}
           <Stack.Screen name="AddStacks" component={AddStacks} />
+          {/* Workplace Stack */}
+          <Stack.Screen name="WorkplaceStacks" component={WorkplaceStacks} />
           
         </Stack.Navigator>
 

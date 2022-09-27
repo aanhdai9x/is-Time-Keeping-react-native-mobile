@@ -1,32 +1,24 @@
 import React from 'react'
-import Background from '../components/Background'
-import Logo from '../components/Logo'
-import Header from '../components/Header'
-import Paragraph from '../components/Paragraph'
-import Button from '../components/Button'
+import {
+  SafeAreaView,
+  FlatList,
+  StyleSheet,
+  Text
+} from 'react-native';
+import RowWorkplace from '../components/RowWorkplace';
+
+const lists = [
+  { key: 'colleague_birthday', icon: require('../assets/birthday_cake.png'), title: "Sinh nhật đồng nghiệp", description: "" },
+  { key: 'honor', icon: require('../assets/raise_hand.png'), title: "VINH DANH 5 NGƯỜI ĐẾN SỚM NHẤT CÔNG TY", description: "" },
+];
 
 export default function WorkplaceScreen({ navigation }) {
   return (
-    <Background>
-      <Logo />
-      <Header>Let’s start WorkplaceScreen</Header>
-      <Paragraph>
-        Your amazing app starts here. Open you favorite code editor and start
-        editing this project.
-      </Paragraph>
-      <Button
-        mode="outlined"
-        onPress={() => {
-          localStorage.setItem("token", "");
-          navigation.reset({
-            index: 0,
-            routes: [{ name: 'StartScreen' }],
-          })
-          
-        }}
-      >
-        Logout
-      </Button>
-    </Background>
+    <SafeAreaView>
+      <FlatList
+        data={lists}
+        renderItem={({ item }) => (<RowWorkplace workspace={item} />)}
+      />
+    </SafeAreaView>
   )
 }

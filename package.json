@@ -19,6 +19,7 @@
     "react": "18.0.0",
     "react-devtools": "^4.26.0",
     "react-native": "0.69.5",
+    "react-native-calendars": "^1.1289.0",
     "react-native-curved-bottom-bar": "^2.1.2",
     "react-native-gesture-handler": "~2.5.0",
     "react-native-gridview": "^0.1.2",

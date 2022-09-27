@@ -68,7 +68,7 @@ export default function AddScreen({ navigation }) {
   return (
     <SafeAreaView>
       <SectionList
-        style={styles.margin}
+        style={styles.padding}
         sections={sectionLists}
         keyExtractor={(section, index) => section + index}
         renderSectionHeader={({ section: { sectionTitle } }) => (
@@ -84,8 +84,8 @@ export default function AddScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  margin: {
-    marginHorizontal: 20,
+  padding: {
+    paddingHorizontal: 20,
   },
   header: {
     fontSize: 14,

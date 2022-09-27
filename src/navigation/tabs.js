@@ -9,6 +9,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { COLORS } from "../Constant/Constant";
 import HomeStacks from "./homeStacks";
 import AddStacks from "./addStacks";
+import WorkplaceStacks from "./workplaceStacks";
 
 const Tab = createBottomTabNavigator();
 
@@ -103,7 +104,7 @@ const Tabs = () => {
                     <CustomTabBarButton {...props}/>
                 ) 
             }}/>
-            <Tab.Screen name="Workplace" component={WorkplaceScreen} options={{
+            <Tab.Screen name="Workplace" component={WorkplaceStacks} options={{
                 tabBarIcon: ({focused}) =>(
                     <View style={{alignItems: 'center', justifyContent: 'center'}}>
                         <Image

@@ -26,6 +26,7 @@ const ProjectScreen = () => {
         style={{
           backgroundColor: 'orange',
           flexDirection: 'row',
+          alignItems: 'center',
         }}
       >
         <Image style={{width: 30, height: 30, margin: 10}} source={(require('../assets/warning2.png'))}/>

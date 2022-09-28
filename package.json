@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/webpack-config": "^0.17.0",
     "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/native": "^5.9.8",
     "@react-navigation/stack": "^5.14.9",
@@ -18,7 +19,9 @@
     "localstorage-polyfill": "^1.0.1",
     "react": "18.0.0",
     "react-devtools": "^4.26.0",
-    "react-native": "0.69.5",
+    "react-dom": "18.0.0",
+    "react-native": "0.69.6",
+    "react-native-auto-size-text": "^1.1.1",
     "react-native-calendars": "^1.1289.0",
     "react-native-curved-bottom-bar": "^2.1.2",
     "react-native-gesture-handler": "~2.5.0",
@@ -28,7 +31,8 @@
     "react-native-screens": "~3.15.0",
     "react-native-status-bar-height": "^2.6.0",
     "react-native-svg": "12.3.0",
-    "react-native-toast-message": "^2.1.5"
+    "react-native-toast-message": "^2.1.5",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

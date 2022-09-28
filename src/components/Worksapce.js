@@ -3,6 +3,7 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { COLORS } from "../Constant/Constant";
 import { useNavigation } from '@react-navigation/native';
+import { AutoSizeText, ResizeTextMode } from 'react-native-auto-size-text';
 
 export default function Workspace({ workspace }) {
     const navigation = useNavigation();
@@ -29,7 +30,13 @@ export default function Workspace({ workspace }) {
                     <Image style={{ width: 30, height: 30, marginBottom: 15 }} source={icon} />
                     <View>
                         <Text style={{ fontWeight: 'bold' }}>{title}</Text>
-                        <Text>{description}</Text>
+                        {/* <Text>{description}</Text> */}
+                        <AutoSizeText
+                            fontSize={12}
+                            numberOfLines={1}
+                            mode={ResizeTextMode.max_lines}>
+                            {description}
+                        </AutoSizeText>
                     </View>
                 </View>
             </TouchableOpacity>

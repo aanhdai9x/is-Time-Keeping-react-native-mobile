@@ -1,3 +1,5 @@
+import { Dimensions } from 'react-native'
+
 export const COLORS = {
     primary_orange: '#ee4d2d', // primary shopee color
     dark_green: '#00cc00',
@@ -9,3 +11,6 @@ export const BACKGROUNDS = {
 }
 
 export const BASE_URL = 'http://10.161.20.134:8090';
+
+export const deviceWidth = Dimensions.get('window').width;
+export const deviceHeight = Dimensions.get('window').height;

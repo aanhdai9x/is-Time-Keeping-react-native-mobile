@@ -30,7 +30,6 @@ export default function Workspace({ workspace }) {
                     <Image style={{ width: 30, height: 30, marginBottom: 15 }} source={icon} />
                     <View>
                         <Text style={{ fontWeight: 'bold' }}>{title}</Text>
-                        {/* <Text>{description}</Text> */}
                         <AutoSizeText
                             fontSize={12}
                             numberOfLines={1}

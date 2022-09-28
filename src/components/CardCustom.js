@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { COLORS } from '../Constant/Constant'
+import { deviceHeight } from '../Constant/Constant'
+import { AutoSizeText, ResizeTextMode } from 'react-native-auto-size-text';
 
 export default function CardCustom() {
   return <View style={styles.card}>
@@ -19,43 +21,70 @@ export default function CardCustom() {
     <Text>CMC</Text>
     <Text>nvduong1@cmc.com.vn</Text>
 
-    <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+    <View style={{
+      flexDirection: 'row',
+      justifyContent: 'center',
+      width: '100%',
+      justifyContent: 'space-between',
+    }}>
       <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }} >
         <Text
           style={{
             color: COLORS.dark_green,
           }}>x</Text>
-        <Text>Nhân viên</Text>
-      </View>
-      <View style={{ justifyContent: 'center', alignItems: 'center', flex: 0.8 }} >
-        <Text style={{
-          color: COLORS.dark_green,
-        }}>x</Text>
-        <Text>Đã checkin</Text>
-      </View>
-      <View style={{ justifyContent: 'center', alignItems: 'center', flex: 0.8 }} >
-        <Text style={{
-          color: COLORS.dark_green,
-        }}>x</Text>
-        <Text>Đi muộn</Text>
+        <AutoSizeText
+          fontSize={12}
+          numberOfLines={1}
+          mode={ResizeTextMode.max_lines}>
+          Nhân viên
+        </AutoSizeText>
       </View>
       <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }} >
         <Text style={{
           color: COLORS.dark_green,
         }}>x</Text>
-        <Text>Chưa checkin</Text>
+        <AutoSizeText
+          fontSize={12}
+          numberOfLines={1}
+          mode={ResizeTextMode.max_lines}>
+          Đã checkin
+        </AutoSizeText>
+      </View>
+      <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }} >
+        <Text style={{
+          color: COLORS.dark_green,
+        }}>x</Text>
+        <AutoSizeText
+          fontSize={12}
+          numberOfLines={1}
+          mode={ResizeTextMode.max_lines}>
+          Đi muộn
+        </AutoSizeText>
+      </View>
+      <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }} >
+        <Text style={{
+          color: COLORS.dark_green,
+        }}>x</Text>
+        <AutoSizeText
+          fontSize={12}
+          numberOfLines={1}
+          mode={ResizeTextMode.max_lines}>
+          Chưa checkin
+        </AutoSizeText>
       </View>
     </View>
     <TouchableOpacity style={{
       backgroundColor: COLORS.dark_green,
       paddingVertical: 10,
       paddingHorizontal: 30,
+      width: '100%',
       borderRadius: 10,
     }}>
       <Text style={{
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: 15,
+        textAlign: 'center',
       }}
       >Mời nhân viên tham gia Workspace</Text>
     </TouchableOpacity>
@@ -68,8 +97,9 @@ export default function CardCustom() {
 
 const styles = StyleSheet.create({
   card: {
-    height: 400,
-    marginBottom: 30,
+    height: deviceHeight * 0.6,
+    marginTop: 10,
+    marginBottom: 20,
     borderWidth: 0.75,
     borderColor: COLORS.light_grey,
     padding: 15,

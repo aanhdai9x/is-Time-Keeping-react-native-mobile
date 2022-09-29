@@ -97,7 +97,7 @@ export default function CardCustom() {
 
 const styles = StyleSheet.create({
   card: {
-    height: deviceHeight * 0.6,
+    height: deviceHeight * 0.5,
     marginTop: 10,
     marginBottom: 20,
     borderWidth: 0.75,

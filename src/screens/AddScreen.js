@@ -14,7 +14,8 @@ import CardCustom from '../components/CardCustom';
 
 const sectionLists = [
   {
-    sectionTitle: '',
+    sectionTitle: 'CARD',
+    key: 'card',
     data: [
       {key: 'card'}
     ],
@@ -72,7 +73,7 @@ export default function AddScreen({ navigation }) {
         sections={sectionLists}
         keyExtractor={(section, index) => section + index}
         renderSectionHeader={({ section: { sectionTitle } }) => (
-          sectionTitle == '' ? null : 
+          sectionTitle == 'CARD' ? null : 
           <Text style={styles.header}>{sectionTitle}</Text>
         )}
         renderItem={({ item, index }) => (

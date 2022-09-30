@@ -16,6 +16,7 @@ import LanguageScreen from '../screens/addTab/LanguageScreen'
 import EditInformationScreen from '../screens/addTab/EditInformationScreen'
 import AppInformationScreen from '../screens/addTab/AppInformationScreen'
 import LogoutScreen from '../screens/addTab/LogoutScreen'
+import NoteScreen from '../screens/addTab/NoteScreen'
 
 const AddStack = createStackNavigator();
 
@@ -49,7 +50,12 @@ export default function AddStacks() {
             <AddStack.Screen name="NotYetCheckoutScreen" component={NotYetCheckoutScreen} />
             <AddStack.Screen name="LanguageScreen" component={LanguageScreen} />
             <AddStack.Screen name="EditInformationScreen" component={EditInformationScreen} />
-            <AddStack.Screen name="AppInformationScreen" component={AppInformationScreen} />
+            <AddStack.Screen name="AppInformationScreen" component={AppInformationScreen} 
+                options={{
+                    title: 'Thông tin ứng dụng'
+                }}
+            />
+            <AddStack.Screen name="NoteScreen" component={NoteScreen} />
             <AddStack.Screen 
                 name="LogoutScreen" 
                 component={LogoutScreen}

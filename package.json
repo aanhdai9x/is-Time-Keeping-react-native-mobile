@@ -25,6 +25,7 @@
     "react-native-auto-size-text": "^1.1.1",
     "react-native-calendars": "^1.1289.0",
     "react-native-camera": "^4.2.1",
+    "react-native-confirm-dialog": "^0.1.0",
     "react-native-curved-bottom-bar": "^2.1.2",
     "react-native-gesture-handler": "~2.5.0",
     "react-native-gridview": "^0.1.2",

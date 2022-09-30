@@ -43,7 +43,14 @@ export default function AddStacks() {
             <AddStack.Screen name="LanguageScreen" component={LanguageScreen} />
             <AddStack.Screen name="EditInformationScreen" component={EditInformationScreen} />
             <AddStack.Screen name="AppInformationScreen" component={AppInformationScreen} />
-            <AddStack.Screen name="LogoutScreen" component={LogoutScreen} />
+            <AddStack.Screen 
+                name="LogoutScreen" 
+                component={LogoutScreen}
+                options={{
+                    title: '',
+                }}
+
+            />
         </AddStack.Navigator>
     )
 }

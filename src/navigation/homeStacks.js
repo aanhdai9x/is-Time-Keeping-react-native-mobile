@@ -24,9 +24,16 @@ export default function HomeStacks() {
             initialRouteName="HomeScreen"
             screenOptions={{
                 headerShown: true,
+                headerStyle: {
+                    backgroundColor: 'null',
+                }
             }}
         >
-            <HomeStack.Screen name=" " component={HomeScreen} />
+            <HomeStack.Screen name="HomeScreen" component={HomeScreen}
+                options={{
+                    title: '',
+                }}
+            />
             <HomeStack.Screen name="EventScreen" component={EventScreen} />
             <HomeStack.Screen name="MeetingScheduleScreen" component={MeetingScheduleScreen} />
             <HomeStack.Screen name="UserScreen" component={UserScreen} />

@@ -45,15 +45,6 @@ export default function LogoutScreen({ navigation }) {
   return (
     <ConfirmProvider>
       <ConfirmableButton />
-      {/* <TouchableOpacity onPress={() => {
-        navigation.reset({
-          index: 0,
-          routes: [{ name: 'StartScreen' }],
-        })
-      }}
-      >
-        <Text>title</Text>
-      </TouchableOpacity> */}
     </ConfirmProvider>
   )
 }

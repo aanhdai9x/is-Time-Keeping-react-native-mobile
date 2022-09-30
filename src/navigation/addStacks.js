@@ -25,9 +25,16 @@ export default function AddStacks() {
             initialRouteName="AddScreen"
             screenOptions={{
                 headerShown: true,
+                headerStyle: {
+                    backgroundColor: 'null',
+                }
             }}
         >
-            <AddStack.Screen name=" " component={AddScreen} />
+            <AddStack.Screen name="AddScreen" component={AddScreen} 
+                options={{
+                    title: '',
+                }}
+            />
             <AddStack.Screen name="CheckinStatisticScreen" component={CheckinStatisticScreen} />
             <AddStack.Screen name="ProjectStatisticScreen" component={ProjectStatisticScreen} />
             <AddStack.Screen name="ApplicationThoughtScreen" component={ApplicationThoughtScreen} />

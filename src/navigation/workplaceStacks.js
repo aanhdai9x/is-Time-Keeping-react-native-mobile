@@ -11,9 +11,16 @@ export default function WorkplaceStacks() {
             initialRouteName="WorkplaceScreen"
             screenOptions={{
                 headerShown: true,
+                headerStyle: {
+                    backgroundColor: 'null',
+                }
             }}
         >
-            <WorkplaceStack.Screen name=" " component={WorkplaceScreen} />
+            <WorkplaceStack.Screen name="WorkplaceScreen" component={WorkplaceScreen}
+                options={{
+                    title: '',
+                }}
+            />
             <WorkplaceStack.Screen name="ColleagueBirthdayScreen" component={ColleagueBirthdayScreen} />
             <WorkplaceStack.Screen name="HonorScreen" component={HonorScreen} />
 

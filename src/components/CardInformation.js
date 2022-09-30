@@ -97,14 +97,4 @@ const styles = StyleSheet.create({
         padding: 20,
         paddingVertical: 60,
     },
-    avatar: {
-        width: 90,
-        height: 90,
-        borderRadius: 90 / 2,
-        borderWidth: 3,
-        borderColor: COLORS.dark_green,
-        backgroundColor: COLORS.dark_green,
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
 });

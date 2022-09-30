@@ -17,6 +17,7 @@ import EditInformationScreen from '../screens/addTab/EditInformationScreen'
 import AppInformationScreen from '../screens/addTab/AppInformationScreen'
 import LogoutScreen from '../screens/addTab/LogoutScreen'
 import NoteScreen from '../screens/addTab/NoteScreen'
+import userTopTabs from './userTopTaps';
 
 const AddStack = createStackNavigator();
 
@@ -31,7 +32,7 @@ export default function AddStacks() {
                 }
             }}
         >
-            <AddStack.Screen name="AddScreen" component={AddScreen} 
+            <AddStack.Screen name="AddScreen" component={AddScreen}
                 options={{
                     title: '',
                 }}
@@ -43,21 +44,25 @@ export default function AddStacks() {
             <AddStack.Screen name="OfficeScreen" component={OfficeScreen} />
             <AddStack.Screen name="CheckinFormScreen" component={CheckinFormScreen} />
             <AddStack.Screen name="CheckinMachineScreen" component={CheckinMachineScreen} />
-            <AddStack.Screen name="UserScreen" component={UserScreen} />
+            <AddStack.Screen name="UserScreen" component={userTopTabs} />
             <AddStack.Screen name="DateStartWorkScreen" component={DateStartWorkScreen} />
             <AddStack.Screen name="TotalDateScreen" component={TotalDateScreen} />
             <AddStack.Screen name="SummaryYearScreen" component={SummaryYearScreen} />
             <AddStack.Screen name="NotYetCheckoutScreen" component={NotYetCheckoutScreen} />
-            <AddStack.Screen name="LanguageScreen" component={LanguageScreen} />
+            <AddStack.Screen name="LanguageScreen" component={LanguageScreen}
+                options={{
+                    title: 'Ngôn ngữ hiển thị'
+                }}
+            />
             <AddStack.Screen name="EditInformationScreen" component={EditInformationScreen} />
-            <AddStack.Screen name="AppInformationScreen" component={AppInformationScreen} 
+            <AddStack.Screen name="AppInformationScreen" component={AppInformationScreen}
                 options={{
                     title: 'Thông tin ứng dụng'
                 }}
             />
             <AddStack.Screen name="NoteScreen" component={NoteScreen} />
-            <AddStack.Screen 
-                name="LogoutScreen" 
+            <AddStack.Screen
+                name="LogoutScreen"
                 component={LogoutScreen}
                 options={{
                     title: '',

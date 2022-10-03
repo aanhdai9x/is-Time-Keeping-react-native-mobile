@@ -2,6 +2,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import UserScreen from '../screens/addTab/UserScreen';
 import ProjectScreen from '../screens/ProjectScreen';
 import CheckinMachineScreen from '../screens/addTab/CheckinMachineScreen';
+import CheckinScreen from '../screens/addTab/userTab/CheckinScreen';
 import { COLORS } from '../Constant/Constant';
 
 const Tab = createMaterialTopTabNavigator();
@@ -9,7 +10,7 @@ const Tab = createMaterialTopTabNavigator();
 export default function userTopTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="UserScreen"
+      initialRouteName="CheckinScreen"
       screenOptions={{
         tabBarActiveTintColor: 'black',
         tabBarLabelStyle: { fontSize: 12 },
@@ -20,8 +21,8 @@ export default function userTopTabs() {
       }}
     >
       <Tab.Screen
-        name="UserScreen"
-        component={UserScreen}
+        name="CheckinScreen"
+        component={CheckinScreen}
         options={{ tabBarLabel: 'CHECKIN' }}
       />
       <Tab.Screen

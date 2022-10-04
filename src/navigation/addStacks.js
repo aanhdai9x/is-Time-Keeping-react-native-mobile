@@ -54,7 +54,11 @@ export default function AddStacks() {
                     title: 'Ngôn ngữ hiển thị'
                 }}
             />
-            <AddStack.Screen name="EditInformationScreen" component={EditInformationScreen} />
+            <AddStack.Screen name="EditInformationScreen" component={EditInformationScreen}
+                options={{
+                    title: 'Cập nhật thông tin',
+                }}
+            />
             <AddStack.Screen name="AppInformationScreen" component={AppInformationScreen}
                 options={{
                     title: 'Thông tin ứng dụng'

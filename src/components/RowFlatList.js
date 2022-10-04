@@ -24,7 +24,7 @@ export default function RowFlatList({ workspace }) {
                     alignItems: 'center',
                 }}
                 >
-                    <Image style={{ width: 30, height: 30, marginBottom: 15 }} source={icon} />
+                    {!icon ? null: <Image style={{ width: 30, height: 30, marginBottom: 15 }} source={icon} />}
                     <View style={{ flex: 1 }}>
                         <Text style={{ fontWeight: 'bold', paddingLeft: 20 }}>{title}</Text>
                         <Text>{description}</Text>

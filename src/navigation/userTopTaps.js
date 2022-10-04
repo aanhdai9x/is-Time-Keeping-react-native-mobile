@@ -3,6 +3,7 @@ import UserScreen from '../screens/addTab/UserScreen';
 import ProjectScreen from '../screens/ProjectScreen';
 import CheckinMachineScreen from '../screens/addTab/CheckinMachineScreen';
 import CheckinScreen from '../screens/addTab/userTab/CheckinScreen';
+import InformationScreen from '../screens/addTab/userTab/InformationScreen';
 import { COLORS } from '../Constant/Constant';
 
 const Tab = createMaterialTopTabNavigator();
@@ -31,8 +32,8 @@ export default function userTopTabs() {
         options={{ tabBarLabel: 'DỰ ÁN' }}
       />
       <Tab.Screen
-        name="CheckinMachineScreen"
-        component={CheckinMachineScreen}
+        name="InformationScreen"
+        component={InformationScreen}
         options={{ tabBarLabel: 'THÔNG TIN' }}
       />
     </Tab.Navigator>

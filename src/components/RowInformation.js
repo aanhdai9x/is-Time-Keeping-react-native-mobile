@@ -4,7 +4,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { COLORS } from "../Constant/Constant";
 import { useNavigation } from '@react-navigation/native';
 
-export default function RowInformation({ workspace}) {
+export default function RowInformation({ workspace }) {
     const navigation = useNavigation();
     const { title, description } = workspace;
     return (
@@ -13,34 +13,37 @@ export default function RowInformation({ workspace}) {
             paddingVertical: 10,
         }}>
             <View style={{
-                borderBottomWidth: title !='CẬP NHẬT THÔNG TIN' ? 0.75 : 0,
+                borderBottomWidth: title != 'CẬP NHẬT THÔNG TIN' ? 0.75 : 0,
                 borderColor: COLORS.light_grey,
                 width: '100%',
                 height: '100%',
             }}
             >
-                {title !='CẬP NHẬT THÔNG TIN' ? <View style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                }}
-                >
-                    <Text style={{ flex: 1}}>{title}</Text>
-                    <Text style={{color: COLORS.light_grey}}>{description}</Text>
-                </View> : <TouchableOpacity
-                    style={{
-                        backgroundColor: COLORS.dark_green,
-                        alignItems: 'center',
-                        ...styles.shadow,
-                }}
-                >
-                    <Text
-                        style={{
-                            color: 'white',
+                {
+                    title != 'CẬP NHẬT THÔNG TIN' ?
+                        <View style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
                         }}
-                    >{title}</Text>
-                </TouchableOpacity>
+                        >
+                            <Text style={{ flex: 1 }}>{title}</Text>
+                            <Text style={{ color: COLORS.light_grey }}>{description}</Text>
+                        </View> :
+                        <TouchableOpacity
+                            style={{
+                                backgroundColor: COLORS.dark_green,
+                                alignItems: 'center',
+                                ...styles.shadow,
+                            }}
+                        >
+                            <Text
+                                style={{
+                                    color: 'white',
+                                }}
+                            >{title}</Text>
+                        </TouchableOpacity>
                 }
-                
+
             </View>
         </View>
     )

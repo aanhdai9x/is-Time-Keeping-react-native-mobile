@@ -10,30 +10,31 @@ import {
 import { COLORS } from '../../../Constant/Constant'
 import SectionList from 'react-native/Libraries/Lists/SectionList'
 import RowInformation from '../../../components/RowInformation';
+import user from '../../../Model/user';
 
 const sectionLists = [
     {
         sectionTitle: 'THÔNG TIN LIÊN HỆ',
         data: [
-            { title: "Họ tên", description: "Administrator" },
-            { title: "Vị trí", description: "" },
-            { title: "Email", description: "nvduong@cmc.com.vn" },
-            { title: "Ngày bắt đầu làm việc", description: "21/09/2022" },
-            { title: "Số điện thoại", description: "" },
-            { title: "Leader", description: "Administrator" },
-            { title: "Email leader", description: "abc@gmail.com" },
-            { title: "Số lần đi muộn trong tháng", description: "0" },
-            { title: "Số lần đi muộn trong năm", description: "0" },
+            { title: "Họ tên", description: user.name },
+            { title: "Vị trí", description: user.position },
+            { title: "Email", description: user.email },
+            { title: "Ngày bắt đầu làm việc", description: user.startWork },
+            { title: "Số điện thoại", description: user.phoneNumber },
+            { title: "Leader", description: user.leaderName },
+            { title: "Email leader", description: user.leaderEmail },
+            { title: "Số lần đi muộn trong tháng", description: user.LatePerMonth },
+            { title: "Số lần đi muộn trong năm", description: user.LatePerYear },
         ],
     },
     {
         sectionTitle: 'THÔNG TIN CƠ BẢN',
         data: [
-            { title: "Ngày sinh", description: "" },
-            { title: "Giới tính", description: "Nam" },
-            { title: "Số CMND", description: "" },
-            { title: "Ngày cấp CMND", description: "" },
-            { title: "Nơi cấp CMND", description: "" },
+            { title: "Ngày sinh", description: user.birthday },
+            { title: "Giới tính", description: user.gender },
+            { title: "Số CMND", description: user.IDnumber },
+            { title: "Ngày cấp CMND", description: user.dateForID },
+            { title: "Nơi cấp CMND", description: user.placeForID },
         ],
     },
     {

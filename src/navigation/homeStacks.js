@@ -14,6 +14,7 @@ import Project2Screen from "../screens/homeTab/Project2Screen"
 import SeniorityScreen from "../screens/homeTab/SeniorityScreen"
 import SummaryScreen from "../screens/homeTab/SummaryScreen"
 import { createStackNavigator } from '@react-navigation/stack';
+import HeaderCustom from "../components/HeaderCustom";
 
 
 const HomeStack = createStackNavigator();
@@ -31,7 +32,7 @@ export default function HomeStacks() {
         >
             <HomeStack.Screen name="HomeScreen" component={HomeScreen}
                 options={{
-                    title: '',
+                    headerTitle: () => <HeaderCustom />
                 }}
             />
             <HomeStack.Screen name="EventScreen" component={EventScreen} />

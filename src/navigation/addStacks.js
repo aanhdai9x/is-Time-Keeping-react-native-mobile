@@ -21,6 +21,7 @@ import userTopTabs from './userTopTaps';
 import OnTimeScreen from '../screens/addTab/checkinStatisticTab/OnTimeScreen';
 import LateTimeScreen from '../screens/addTab/checkinStatisticTab/LateTimeScreen';
 import NotYetCheckinScreen from '../screens/addTab/checkinStatisticTab/NotYetCheckinScreen'
+import HeaderCustom from '../components/HeaderCustom';
 
 const AddStack = createStackNavigator();
 
@@ -37,7 +38,7 @@ export default function AddStacks() {
         >
             <AddStack.Screen name="AddScreen" component={AddScreen}
                 options={{
-                    title: '',
+                    headerTitle: () => <HeaderCustom />
                 }}
             />
             <AddStack.Screen name="CheckinStatisticScreen" component={CheckinStatisticScreen}

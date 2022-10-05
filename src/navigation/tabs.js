@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
 import HomeScreen from "../screens/HomeScreen";
 import AddScreen from "../screens/AddScreen";
 import ProjectScreen from "../screens/ProjectScreen";
@@ -10,6 +9,8 @@ import { COLORS } from "../Constant/Constant";
 import HomeStacks from "./homeStacks";
 import AddStacks from "./addStacks";
 import WorkplaceStacks from "./workplaceStacks";
+import HeaderCustom from "../components/HeaderCustom";
+import ProjectStacks from "./projectStacks";
 
 const Tab = createBottomTabNavigator();
 
@@ -70,7 +71,7 @@ const Tabs = () => {
                     </View>
                 ),
             }}/>
-            <Tab.Screen name="Project" component={ProjectScreen} options={{
+            <Tab.Screen name="Project" component={ProjectStacks} options={{
                 tabBarIcon: ({focused}) =>(
                     <View style={{alignItems: 'center', justifyContent: 'center'}}>
                         <Image

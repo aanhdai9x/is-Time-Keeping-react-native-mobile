@@ -18,6 +18,9 @@ import AppInformationScreen from '../screens/addTab/AppInformationScreen'
 import LogoutScreen from '../screens/addTab/LogoutScreen'
 import NoteScreen from '../screens/addTab/NoteScreen'
 import userTopTabs from './userTopTaps';
+import OnTimeScreen from '../screens/addTab/checkinStatisticTab/OnTimeScreen';
+import LateTimeScreen from '../screens/addTab/checkinStatisticTab/LateTimeScreen';
+import NotYetCheckinScreen from '../screens/addTab/checkinStatisticTab/NotYetCheckinScreen'
 
 const AddStack = createStackNavigator();
 
@@ -37,14 +40,18 @@ export default function AddStacks() {
                     title: '',
                 }}
             />
-            <AddStack.Screen name="CheckinStatisticScreen" component={CheckinStatisticScreen} />
+            <AddStack.Screen name="CheckinStatisticScreen" component={CheckinStatisticScreen}
+                options={{
+                    title: 'Thống kê checkin'
+                }}
+            />
             <AddStack.Screen name="ProjectStatisticScreen" component={ProjectStatisticScreen} />
             <AddStack.Screen name="ApplicationThoughtScreen" component={ApplicationThoughtScreen} />
             <AddStack.Screen name="OTApplicationScreen" component={OTApplicationScreen} />
-            <AddStack.Screen name="OfficeScreen" component={OfficeScreen} 
+            <AddStack.Screen name="OfficeScreen" component={OfficeScreen}
                 options={({ navigation, route }) => ({
                     headerTitle: 'Quản lý văn phòng làm việc',
-                  })}
+                })}
             />
             <AddStack.Screen name="CheckinFormScreen" component={CheckinFormScreen} />
             <AddStack.Screen name="CheckinMachineScreen" component={CheckinMachineScreen} />
@@ -75,7 +82,23 @@ export default function AddStacks() {
                 options={{
                     title: '',
                 }}
+            />
 
+            {/* Checkin Statistic Stacks */}
+            <AddStack.Screen name="OnTimeScreen" component={OnTimeScreen}
+                options={{
+                    title: 'Đúng giờ',
+                }}
+            />
+            <AddStack.Screen name="LateTimeScreen" component={LateTimeScreen} 
+                options={{
+                    title: 'Muộn giờ',
+                }}
+            />
+            <AddStack.Screen name="NotYetCheckinScreen" component={NotYetCheckinScreen} 
+                options={{
+                    title: 'Chưa checkin',
+                }}
             />
         </AddStack.Navigator>
     )

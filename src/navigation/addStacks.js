@@ -48,8 +48,16 @@ export default function AddStacks() {
                 }}
             />
             <AddStack.Screen name="ProjectStatisticScreen" component={ProjectStatisticScreen} />
-            <AddStack.Screen name="ApplicationThoughtScreen" component={ApplicationThoughtScreen} />
-            <AddStack.Screen name="OTApplicationScreen" component={OTApplicationScreen} />
+            <AddStack.Screen name="ApplicationThoughtScreen" component={ApplicationThoughtScreen}
+                options={{
+                    title: 'Đơn báo nghỉ'
+                }}
+            />
+            <AddStack.Screen name="OTApplicationScreen" component={OTApplicationScreen} 
+                options={{
+                    title: 'Đơn báo làm thêm'
+                }}
+            />
             <AddStack.Screen name="OfficeScreen" component={OfficeScreen}
                 options={({ navigation, route }) => ({
                     headerTitle: 'Quản lý văn phòng làm việc',

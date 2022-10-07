@@ -1,18 +1,11 @@
 import React from 'react'
-import Background from '../../components/Background'
-import Logo from '../../components/Logo'
-import Header from '../../components/Header'
-import Paragraph from '../../components/Paragraph'
+import Empty from '../../components/Empty'
 
 export default function ApplicationThoughtScreen({ navigation }) {
-  return (
-    <Background>
-      <Logo />
-      <Header>Let’s start Application Thought Screen</Header>
-      <Paragraph>
-        Your amazing app starts here. Open you favorite code editor and start
-        editing this project.
-      </Paragraph>
-    </Background>
-  )
+    return (
+        <Empty
+            title={'Danh sách báo nghỉ trống'}
+            subTitle={'Chưa có đơn báo nghỉ nào'}
+        />
+    );
 }

@@ -22,6 +22,7 @@ import OnTimeScreen from '../screens/addTab/checkinStatisticTab/OnTimeScreen';
 import LateTimeScreen from '../screens/addTab/checkinStatisticTab/LateTimeScreen';
 import NotYetCheckinScreen from '../screens/addTab/checkinStatisticTab/NotYetCheckinScreen'
 import HeaderCustom from '../components/HeaderCustom';
+import notCheckoutTopTabs from './notCheckoutTopTaps';
 
 const AddStack = createStackNavigator();
 
@@ -68,7 +69,11 @@ export default function AddStacks() {
                 }}
             />
             <AddStack.Screen name="SummaryYearScreen" component={SummaryYearScreen} />
-            <AddStack.Screen name="NotYetCheckoutScreen" component={NotYetCheckoutScreen} />
+            <AddStack.Screen name="NotYetCheckoutScreen" component={notCheckoutTopTabs}
+                options={{
+                    title: 'Chưa checkout'
+                }}
+            />
             <AddStack.Screen name="LanguageScreen" component={LanguageScreen}
                 options={{
                     title: 'Ngôn ngữ hiển thị'

@@ -57,8 +57,16 @@ export default function AddStacks() {
             <AddStack.Screen name="CheckinFormScreen" component={CheckinFormScreen} />
             <AddStack.Screen name="CheckinMachineScreen" component={CheckinMachineScreen} />
             <AddStack.Screen name="UserScreen" component={userTopTabs} />
-            <AddStack.Screen name="DateStartWorkScreen" component={DateStartWorkScreen} />
-            <AddStack.Screen name="TotalDateScreen" component={TotalDateScreen} />
+            <AddStack.Screen name="DateStartWorkScreen" component={DateStartWorkScreen}
+                options={{
+                    headerShown: false,
+                }}
+            />
+            <AddStack.Screen name="TotalDateScreen" component={TotalDateScreen}
+                options={{
+                    headerShown: false,
+                }}
+            />
             <AddStack.Screen name="SummaryYearScreen" component={SummaryYearScreen} />
             <AddStack.Screen name="NotYetCheckoutScreen" component={NotYetCheckoutScreen} />
             <AddStack.Screen name="LanguageScreen" component={LanguageScreen}
@@ -91,12 +99,12 @@ export default function AddStacks() {
                     title: 'Đúng giờ',
                 }}
             />
-            <AddStack.Screen name="LateTimeScreen" component={LateTimeScreen} 
+            <AddStack.Screen name="LateTimeScreen" component={LateTimeScreen}
                 options={{
                     title: 'Muộn giờ',
                 }}
             />
-            <AddStack.Screen name="NotYetCheckinScreen" component={NotYetCheckinScreen} 
+            <AddStack.Screen name="NotYetCheckinScreen" component={NotYetCheckinScreen}
                 options={{
                     title: 'Chưa checkin',
                 }}

@@ -31,7 +31,7 @@ export default function RowCheckinStatistic({ workspace }) {
                         paddingLeft: 20,
                     }}>
                         <Text style={{ fontWeight: '500', fontSize: 18, }}>{title}</Text>
-                        <Text style={{ color: COLORS.dark_green }}>{description}</Text>
+                        {!description ? null : <Text style={{ color: COLORS.dark_green }}>{description}</Text>}
                     </View>
                     <Image style={{ width: 30, height: 30, tintColor: COLORS.light_grey }} source={require('../assets/next.png')} />
                 </View>
@@ -52,6 +52,12 @@ function onclick_item(key) {
         case 'not_yet_chekin':
             return 'NotYetCheckinScreen';
             break;
+        case 'project_chart':
+            return 'ProjectChartScreen';
+            break;
+        case 'project_list':
+            return 'ProjectListScreen';
+            break;
 
         default:
             break;
@@ -67,7 +73,6 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 10,
         elevation: 10,
-
     },
 
 });

@@ -23,6 +23,8 @@ import LateTimeScreen from '../screens/addTab/checkinStatisticTab/LateTimeScreen
 import NotYetCheckinScreen from '../screens/addTab/checkinStatisticTab/NotYetCheckinScreen'
 import HeaderCustom from '../components/HeaderCustom';
 import notCheckoutTopTabs from './notCheckoutTopTaps';
+import ProjectChartScreen from '../screens/addTab/projectStatisticTab/ProjectChartScreen';
+import ProjectListScreen from '../screens/addTab/projectStatisticTab/ProjectListScreen';
 
 const AddStack = createStackNavigator();
 
@@ -47,13 +49,17 @@ export default function AddStacks() {
                     title: 'Thống kê checkin'
                 }}
             />
-            <AddStack.Screen name="ProjectStatisticScreen" component={ProjectStatisticScreen} />
+            <AddStack.Screen name="ProjectStatisticScreen" component={ProjectStatisticScreen}
+                options={{
+                    title: 'Thống kê dự án'
+                }}
+            />
             <AddStack.Screen name="ApplicationThoughtScreen" component={ApplicationThoughtScreen}
                 options={{
                     title: 'Đơn báo nghỉ'
                 }}
             />
-            <AddStack.Screen name="OTApplicationScreen" component={OTApplicationScreen} 
+            <AddStack.Screen name="OTApplicationScreen" component={OTApplicationScreen}
                 options={{
                     title: 'Đơn báo làm thêm'
                 }}
@@ -120,6 +126,18 @@ export default function AddStacks() {
             <AddStack.Screen name="NotYetCheckinScreen" component={NotYetCheckinScreen}
                 options={{
                     title: 'Chưa checkin',
+                }}
+            />
+
+            {/* Project Statistic Stacks */}
+            <AddStack.Screen name="ProjectChartScreen" component={ProjectChartScreen}
+                options={{
+                    title: 'Thống kê dự án',
+                }}
+            />
+            <AddStack.Screen name="ProjectListScreen" component={ProjectListScreen}
+                options={{
+                    title: 'Danh sách dự án',
                 }}
             />
         </AddStack.Navigator>

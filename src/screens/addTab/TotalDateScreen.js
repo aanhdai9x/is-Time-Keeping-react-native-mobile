@@ -1,6 +1,5 @@
 import React from 'react'
 import { Text, TouchableOpacity, View, StyleSheet, Image, ImageBackground } from 'react-native';
-import { FancyAlert } from 'react-native-expo-fancy-alerts';
 import { COLORS } from '../../Constant/Constant'
 import UserAvatar from 'react-native-user-avatar';
 import user from '../../Model/user';

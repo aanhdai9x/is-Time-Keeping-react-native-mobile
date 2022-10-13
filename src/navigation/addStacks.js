@@ -70,7 +70,11 @@ export default function AddStacks() {
                 })}
             />
             <AddStack.Screen name="CheckinFormScreen" component={CheckinFormScreen} />
-            <AddStack.Screen name="CheckinMachineScreen" component={CheckinMachineScreen} />
+            <AddStack.Screen name="CheckinMachineScreen" component={CheckinMachineScreen}
+                options={{
+                    title: 'Máy checkin'
+                }}
+            />
             <AddStack.Screen name="UserScreen" component={userTopTabs} />
             <AddStack.Screen name="DateStartWorkScreen" component={DateStartWorkScreen}
                 options={{

@@ -69,7 +69,11 @@ export default function AddStacks() {
                     headerTitle: 'Quản lý văn phòng làm việc',
                 })}
             />
-            <AddStack.Screen name="CheckinFormScreen" component={CheckinFormScreen} />
+            <AddStack.Screen name="CheckinFormScreen" component={CheckinFormScreen} 
+                options={{
+                    title: 'Hình thức checkin'
+                }}
+            />
             <AddStack.Screen name="CheckinMachineScreen" component={CheckinMachineScreen}
                 options={{
                     title: 'Máy checkin'

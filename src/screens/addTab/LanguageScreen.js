@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import RadioGroup from 'react-native-radio-buttons-group';
 import { View, StyleSheet, Text } from 'react-native';
 import RadioCustom from '../../components/RadioCustom'
 

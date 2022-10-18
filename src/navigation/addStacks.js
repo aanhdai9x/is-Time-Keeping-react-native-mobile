@@ -90,7 +90,11 @@ export default function AddStacks() {
                     headerShown: false,
                 }}
             />
-            <AddStack.Screen name="SummaryYearScreen" component={SummaryYearScreen} />
+            <AddStack.Screen name="SummaryYearScreen" component={SummaryYearScreen} 
+                options={{
+                    headerShown: false,
+                }}
+            />
             <AddStack.Screen name="NotYetCheckoutScreen" component={notCheckoutTopTabs}
                 options={{
                     title: 'Chưa checkout'

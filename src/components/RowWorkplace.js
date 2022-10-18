@@ -9,7 +9,7 @@ export default function RowWorkplace({ workspace }) {
     const { key, icon, title, description } = workspace;
     return (
         <View style={{
-            marginTop: 20,
+            marginTop: 10,
         }}>
             <TouchableOpacity onPress={() => navigation.navigate(onclick_item(key))} style={{
                 borderTopWidth: 0.75,

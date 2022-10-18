@@ -57,11 +57,10 @@ export default function AvatarInfor() {
         <Text
           style={{
             fontSize: 30,
-            fontWeight: 'bold'
+            fontWeight: 'bold',
           }}
         >
-          {user.name}
-        </Text>
+          {user.name} </Text>
         <Text
           style={{
             color: COLORS.light_grey,

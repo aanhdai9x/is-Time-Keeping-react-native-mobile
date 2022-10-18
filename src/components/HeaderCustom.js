@@ -5,27 +5,26 @@ import { theme } from '../core/theme'
 import UserAvatar from 'react-native-user-avatar';
 import user from '../Model/user';
 import { COLORS } from '../Constant/Constant';
+import { AutoSizeText, ResizeTextMode } from 'react-native-auto-size-text';
 
 export default function HeaderCustom() {
     return (
         <View
             style={{
                 alignItems: 'center',
+                justifyContent: 'space-between',
                 flexDirection: 'row',
-                paddingVertical: 20,
             }}
         >
-            <TouchableOpacity>
-                <Image source={require('../assets/app_icon_green.png')}/>
+            <TouchableOpacity
+                style={{ marginLeft: -10 }}
+            >
+                <Image source={require('../assets/app_icon_green.png')} />
             </TouchableOpacity>
             <TouchableOpacity
                 style={{ flex: 1 }}
             >
-                <View
-                    style={{
-                        paddingHorizontal: 10,
-                    }}
-                >
+                <View>
                     <View
                         style={{
                             flexDirection: 'row',
@@ -47,8 +46,13 @@ export default function HeaderCustom() {
                             }}
                         />
                     </View>
-
-                    <Text>{user.email}</Text>
+                    <AutoSizeText
+                        fontSize={15}
+                        numberOfLines={1}
+                        mode={ResizeTextMode.max_lines}
+                    >
+                        {user.email}
+                    </AutoSizeText>
                 </View>
             </TouchableOpacity>
             <TouchableOpacity>

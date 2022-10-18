@@ -1,31 +1,34 @@
 import React from 'react'
-import { Text, TouchableOpacity, View, StyleSheet, Image, ImageBackground } from 'react-native';
-import { COLORS } from '../../Constant/Constant'
+import { ScrollView, View, StyleSheet, ImageBackground } from 'react-native';
 import Blink from '../../components/Blink'
 import QR from '../../components/QR';
 
 export default function CheckinMachineScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <ImageBackground source={require('../../assets/background_qr.png')} resizeMode="cover" style={styles.container}>
-        <View
-          style={{ alignItems: 'center' }}
-        >
+    <ScrollView>
+      <View style={styles.container}>
+        <ImageBackground source={require('../../assets/background_qr.png')} resizeMode="cover" style={styles.container}>
           <View
-            style={{marginVertical: 40}}
+            style={{ alignItems: 'center' }}
           >
-            <Blink text={'ĐANG CHỜ KÍCH HOẠT ...'}></Blink>
+            <View
+              style={{ marginVertical: 40 }}
+            >
+              <Blink text={'ĐANG CHỜ KÍCH HOẠT ...'}></Blink>
+            </View>
+            <QR></QR>
           </View>
-          <QR></QR>
-        </View>
-      </ImageBackground>
-    </View>
+        </ImageBackground>
+      </View>
+    </ScrollView>
+
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingBottom: 70,
   },
   image: {
     flex: 1,

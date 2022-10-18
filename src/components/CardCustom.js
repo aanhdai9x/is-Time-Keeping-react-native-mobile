@@ -17,7 +17,7 @@ export default function CardCustom() {
     <Text style={{
       color: COLORS.dark_green,
       fontWeight: 'bold',
-    }}>WORKSPACE</Text>
+    }}> WORKSPACE </Text>
     <Text>CMC</Text>
     <Text>nvduong1@cmc.com.vn</Text>
 
@@ -77,16 +77,21 @@ export default function CardCustom() {
       backgroundColor: COLORS.dark_green,
       paddingVertical: 10,
       paddingHorizontal: 30,
+      marginVertical: 10,
       width: '100%',
       borderRadius: 10,
     }}>
-      <Text style={{
+      <AutoSizeText
+      style={{
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 15,
         textAlign: 'center',
       }}
-      >Mời nhân viên tham gia Workspace</Text>
+          fontSize={16}
+          numberOfLines={1}
+          mode={ResizeTextMode.max_lines}>
+          Mời nhân viên tham gia Workspace
+        </AutoSizeText>
     </TouchableOpacity>
     <Text style={{
       textAlign: 'center',

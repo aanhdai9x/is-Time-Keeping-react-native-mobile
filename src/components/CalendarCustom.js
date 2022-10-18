@@ -4,7 +4,7 @@ import { Calendar } from 'react-native-calendars';
 
 export default function CalendarCustom({ title, subtitle, warning }) {
   return (
-    <View style={{ paddingTop: 20, marginBottom: 20 }}>
+    <View style={{ marginBottom: 20 }}>
       <View
         style={{
           padding: 20,

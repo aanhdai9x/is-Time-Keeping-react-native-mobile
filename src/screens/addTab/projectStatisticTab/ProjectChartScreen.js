@@ -1,55 +1,57 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLORS } from '../../../Constant/Constant';
 
 export default function ProjectChartScreen({ navigation }) {
   return (
-    <View>
+    <View
+      style={{paddingHorizontal: 10}}
+    >
       <View style={{...styles.row, alignItems: 'flex-end'}}>
-        <View style={{ height: 130, flex: 2, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between', backgroundColor: COLORS.dark_green}}>
+        <TouchableOpacity style={{ height: 130, flex: 2, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between', backgroundColor: COLORS.dark_green}}>
           <Text
             style={{fontSize: 40, color: 'white', ...styles.fontWeight}}
           >0</Text>
           <Text
             style={{...styles.fontWeight, fontSize: 20, color: 'white'}}
           >Tổng số dự án</Text>
-        </View>
-        <View style={{ flex: 1, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between' }}>
+        </TouchableOpacity>
+        <TouchableOpacity style={{ flex: 1, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between' }}>
           <Text
             style={{...styles.fontWeight, color: COLORS.dark_green, fontSize: 20}}
           >0</Text>
           <Text
             style={styles.fontWeight}
           >Đang thực hiện</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.row}>
-        <View style={{ flex: 1, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between' }}>
+        <TouchableOpacity style={{ flex: 1, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between' }}>
           <Text
             style={{...styles.fontWeight, color: 'orange', fontSize: 20}}
           >0</Text>
           <Text
             style={styles.fontWeight}
           >Đang chờ duyệt</Text>
-        </View>
-        <View style={{ flex: 1, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between' }}>
+        </TouchableOpacity>
+        <TouchableOpacity style={{ flex: 1, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between' }}>
           <Text
             style={{...styles.fontWeight, color: COLORS.light_grey, fontSize: 20}}
           >0</Text>
           <Text
             style={styles.fontWeight}
           >Đã kết thúc</Text>
-        </View>
-        <View style={{ flex: 1, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between' }}>
+        </TouchableOpacity>
+        <TouchableOpacity style={{ flex: 1, ...styles.centerAlign, ...styles.shadow, justifyContent: 'space-between' }}>
           <Text
             style={{...styles.fontWeight, color: 'red', fontSize: 20}}
           >0</Text>
           <Text
             style={styles.fontWeight}
           >Đã kết thúc</Text>
-        </View>
+        </TouchableOpacity>
       </View>
-      <View style={{...styles.shadow, ...styles.row, ...styles.left_red}}>
+      <TouchableOpacity style={{...styles.shadow, ...styles.row, ...styles.left_red}}>
         <View style={{flex: 1, justifyContent: 'center'}}>
           <Text
             style={styles.fontWeight}
@@ -63,7 +65,7 @@ export default function ProjectChartScreen({ navigation }) {
             style={{...styles.fontWeight, color: COLORS.light_grey}}
           >Dự án</Text>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }

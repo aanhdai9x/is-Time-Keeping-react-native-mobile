@@ -16,7 +16,7 @@ export default function AppInformationScreen({ navigation }) {
       <View style={{
         ...styles.card,
         paddingVertical: 40,
-        flex: 0.75,
+        flex: 0.7,
         marginBottom: 10,
       }}
       >
